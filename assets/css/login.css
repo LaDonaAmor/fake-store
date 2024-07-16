@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -81,7 +81,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #fab427;
+    background-color: #FAB427;
 }
 
 

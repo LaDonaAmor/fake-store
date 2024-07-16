@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+   color: #FE8D1D;
+   font-weight: 700;
+    font-size: 2.00rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 0; 
+    padding: 0;
+}
+
+nav ul li a {
+    color: #FE8D1D;
+    text-decoration: none;
+    font-size: 1.50rem;
+    position: relative;
+    font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #FAB427;
+    outline: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F8E9B7;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #132D3E;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+    background-color: #51ADE9;
+}
+
+.sun-icon, .moon-icon {
+    position: absolute;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+    pointer-events: none;
+    transition: opacity .4s; 
+}
+
+.sun-icon {
+    left: 2px; 
+    z-index: 3; 
+    opacity: 1;
+}
+
+.moon-icon {
+    left: 22px;
+    z-index: 3; 
+    opacity: 1;
+}
+
+.search-container {
+    position: relative;
+}
+
+input[type="search"] {
+    padding: 10px 15px; 
+    padding-left: 40px; 
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 10px;
+    outline: none;
+}
+
+input[type="search"]::placeholder {
+    color: #00000080;
+}
+
+.search-icon {
+    position: absolute; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    height: 20px; 
+    width: 20px;
+    pointer-events: none;
+}
