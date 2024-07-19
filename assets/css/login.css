@@ -1,11 +1,4 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', Arial, sans-serif;
-}
-
+/* Login Style */
 body {
     display: flex;
     justify-content: center;
@@ -20,19 +13,19 @@ body {
     width: 680px;
     height: 342px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: var(--spacing-large);
     border: 1px solid none;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius-xlarge);
+    background-color: var(--color-background-semi);
+    box-shadow: var(--box-shadow-default);
 }
 
 h1 {
-    font-size: 32px;
+    font-size: var(--font-size-xxlarge);
     font-weight: 700;
     text-align: center;
     position: relative;
-    bottom: 5px;
+    bottom: var(--spacing-small);
 }
 
 form {
@@ -41,12 +34,12 @@ form {
 }
 
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-medium);
     text-align: left;
 }
 
 label {
-    font-size: 13px;
+    font-size: 0.81rem;
     font-weight: 500;
 }
 
@@ -55,56 +48,55 @@ input[type="password"] {
     width: 610px;
     height: 30px;
     padding: 8px 14px;
-    margin-bottom: 10px;
-    margin-top: 8px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 8px;
+    margin: 8px 0 10px o;
+    background-color: var(--color-background-full);
+    border: 1px solid var(--color-background-full);
+    border-radius: var(--border-radius-medium);
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-color: #F4BC49;
+    border-color: var(--color-secondary);
 }
 
 input[type="submit"] {
     width: 100%;
-    padding: 10px;
-    background-color: #F4BC49;
+    padding: var(--spacing-medium);
+    background-color: var(--color-secondary);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius-large);
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     font-weight: 400;
 }
 
 input[type="submit"]:hover {
-    background-color: #fab427;
+    background-color: var(--color-primary);
 }
 
 
- /* Media Queries */
+/* Media Queries */
 
 /* Small devices (smartphones, portrait) */
 @media (max-width: 480px) {
     .login-container {
         width: 90%;
         height: auto;
-        padding: 15px;
+        padding: 0.94rem;
     }
     h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 92%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 14px;
+        padding: 0.75rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -113,19 +105,19 @@ input[type="submit"]:hover {
     .login-container {
         width: 80%;
         height: auto;
-        padding: 15px;
+        padding: 0.938rem;
     }
     h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 92%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 14px;
+        padding: 0.75rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -134,19 +126,19 @@ input[type="submit"]:hover {
     .login-container {
         width: 70%;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
     h1 {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 95%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 15px;
+        padding: 0.75rem;
+        font-size: 0.938rem;
     }
 }
 
@@ -155,19 +147,19 @@ input[type="submit"]:hover {
     .login-container {
         width: 60%;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 95%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+        padding: 0.75rem;
+        font-size: 1rem;
     }
 }
 
@@ -176,19 +168,19 @@ input[type="submit"]:hover {
     .login-container {
         width: 50%;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 95%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+        padding: 0.75rem;
+        font-size: 1rem;
     }
 }
 
@@ -197,19 +189,19 @@ input[type="submit"]:hover {
     .login-container {
         width: 40%;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 95%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+        padding: 0.75rem;
+        font-size: 1rem;
     }
 }
 
@@ -218,18 +210,18 @@ input[type="submit"]:hover {
     .login-container {
         width: 30%;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     input[type="text"],
     input[type="password"] {
         width: 95%;
-        height: 40px;
+        height: 2.5rem;
     }
     input[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+        padding: 0.75rem;
+        font-size: 1rem;
     }
 }
