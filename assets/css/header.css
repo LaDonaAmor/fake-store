@@ -1,22 +1,22 @@
+/* Header Style */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    margin: var(--spacing-large);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-large);
     position: relative;
     z-index: 1000;
     font-family: 'Inter', sans-serif;
-    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow-default);
 }
 
 .logo {
-   color: #FE8D1D;
+   color: var(--color-primary);
    font-weight: 700;
-    font-size: 2.00rem;
+    font-size: var(--font-size-xxlarge);
 }
 
 nav ul {
@@ -24,22 +24,22 @@ nav ul {
     list-style: none;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: var(--spacing-xlarge);
     margin: 0; 
     padding: 0;
 }
 
 nav ul li a {
-    color: #FE8D1D;
+    color: var(--color-primary);
     text-decoration: none;
-    font-size: 1.50rem;
+    font-size: var(--font-size-xlarge);
     position: relative;
     font-weight: 500;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #FAB427;
+    color: var(--color-secondary);
     outline: none;
 }
 
@@ -63,9 +63,9 @@ nav ul li a:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F8E9B7;
+    background-color: var(--color-background-alt);
     transition: .4s;
-    border-radius: 34px;
+    border-radius: var(--border-radius-switch);
 }
 
 .slider:before {
@@ -81,7 +81,7 @@ nav ul li a:focus {
 }
 
 input:checked + .slider {
-    background-color: #132D3E;
+    background-color: var(--color-background-dark);
 }
 
 input:checked + .slider:before {
@@ -120,12 +120,12 @@ input[type="search"] {
     border: none;
     border-radius: 5px;
     background-color: #fff;
-    margin-left: 10px;
+    margin-left: var(--spacing-medium);
     outline: none;
 }
 
 input[type="search"]::placeholder {
-    color: #00000080;
+    color: var(--color-placeholder);
 }
 
 .search-icon {
