@@ -1,0 +1,37 @@
+@import url('../css/table.css');
+
+
+/* Cart Style */
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  padding: var(--spacing-large);
+  display: flex;
+  justify-content: center;
+}
+
+.total-price {
+  text-align: left;
+  font-size: var(--font-size-large);
+  font-weight: 400;
+  position: absolute;
+  top: 177px;
+  right: 60px;
+  align-items: end;
+  color: var(--color-primary-main);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-primary-main);
+}
+
+.product-grid {
+  grid-template-columns: 0.2fr 2fr 1fr 0.3fr 2.7fr 0.1fr;
+}
