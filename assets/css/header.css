@@ -7,16 +7,21 @@
     margin: var(--spacing-large);
     background-color: var(--color-background);
     border-radius: var(--border-radius-large);
-    position: relative;
     z-index: 1000;
     font-family: 'Inter', sans-serif;
     box-shadow: var(--box-shadow-default);
 }
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 .logo {
    color: var(--color-primary);
    font-weight: 700;
-    font-size: var(--font-size-xxlarge);
+   font-size: var(--font-size-xxlarge);
 }
 
 nav ul {
