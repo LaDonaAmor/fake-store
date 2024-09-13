@@ -1,64 +1,71 @@
 /* Table Style */
 
-   .product-list {
-     background-color: var(--color-background);
-     padding: var(--spacing-large);
-     border-radius: 10px;
-     box-shadow: var(--box-shadow-default);
-     width: 100%;
-     max-width: 1804px;
-   }
-   
-   .product-list h2 {
-     text-align: left;
-     font-size: var(--font-size-xxlarge);
-     font-weight: 700;
-     color: var(--color-primary-main);
-     margin: 15px 5px;
-   }
-   
-   .product-grid {
-     display: grid;
-     row-gap: var(--spacing-large);
-     column-gap: var(--spacing-xxlarge);
-     align-items: start;
-     padding: var(--spacing-large);
-   }
-   
-   .separator {
-     height: 1px;
-     background-color: var(--color-dark);
-     margin: 5px 0;
-     grid-column: 1 / -1;
-   }
-   
-   .product-header {
-     font-weight: 600;
-     color: var(--color-text-secondary);
-     font-size: var(--font-size-large);
-   }
-   
-   .product-image {
-     width: 121px;
-     height: 116px;
-     background-color: var(--color-dark);
-     border-radius: var(--border-radius-medium);
-   }
-   
-   .product-title,
-   .product-category,
-   .product-price,
-   .product-description {
-     margin: 5px 0;
-     font-size: 1.50rem;
-     color: var(--color-primary-main);
-   }
-   
-   .product-title {
-     font-weight: 700;
-   }
-   
-   .dollar-sign {
-     color: var(--color-primary);
-   }
-   
+.product-list {
+  background-color: var(--color-background);
+  padding: var(--spacing-large);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-default);
+  width: 100%;
+  max-width: 1804px;
+}
+
+.product-list h2 {
+  text-align: left;
+  font-size: var(--font-size-xxlarge);
+  font-weight: 700;
+  color: var(--color-primary-main);
+  margin: 15px 5px;
+}
+
+.product-grid {
+  display: grid;
+  row-gap: var(--spacing-large);
+  column-gap: 50px;
+  align-items: start;
+  padding: var(--spacing-large);
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-dark);
+  margin: 5px 0;
+  grid-column: 1 / -1;
+}
+
+.product-header {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-large);
+  padding-left: 20px;
+}
+
+.product-image {
+  width: 121px;
+  height: 116px;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.product-title,
+.product-category,
+.product-price,
+.product-description {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  color: var(--color-primary-main);
+}
+
+.product-title {
+  font-weight: 700;
+}
+
+.dollar-sign {
+  color: var(--color-primary);
+}
