@@ -17,5 +17,18 @@ main {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 200px 200px 100px 100px 400px; /* 5 columns of fixed 200px width */
+  grid-template-columns: 150px 300px 150px 50px 300px; /* 5 columns of fixed 200px width */
+}
+
+.product-grid a:link,
+.product-grid a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.product-grid a:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
 }
