@@ -22,15 +22,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 rate: <span class="rate">${product.rating.rate}</span> count:
                 <span class="rate">${product.rating.count}</span>
                </div>
-              <button type="button" class="cart">
+              <button type="button" class="cart" id="addToCartBtn">
                 Add to Cart <img src="../assets/img/svg/plus_24px.svg" alt="plus" class="plus"/>
               </button>
             </div>
           </div>
                `;
+
+      document
+        .getElementById("addToCartBtn")
+        .addEventListener("click", function () {
+          addToCart(product);
+        });
     } catch (error) {
       console.error("Error fetching product details:", error);
     }
+  }
+
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find((item) => item.id === product.id);
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      product.quantity = 1;
+      cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.title} has been added to the  cart`);
   }
 
   if (productId) {

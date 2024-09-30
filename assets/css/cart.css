@@ -33,5 +33,18 @@ main {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 150px 200px 100px 100px 300px 50px; /* 5 columns of fixed 200px width */
+  grid-template-columns: 150px 200px 150px 100px 300px 50px;
+}
+
+.remove {
+  background-color: white;
+  border: none;
+  color: none;
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-small);
+}
+
+.toggle-title,
+.toggle-desc {
+  color: var(--color-primary);
 }

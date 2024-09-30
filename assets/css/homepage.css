@@ -17,7 +17,7 @@ main {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 150px 300px 150px 50px 300px; /* 5 columns of fixed 200px width */
+  grid-template-columns: 150px 300px 150px 50px 300px;
 }
 
 .product-grid a:link,
@@ -31,4 +31,8 @@ main {
   color: gray;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.toggle-desc {
+  color: var(--color-primary);
 }

@@ -56,11 +56,21 @@
   --box-shadow-default: 0rem 0.25rem 3.125rem 0rem rgba(0, 0, 0, 0.25);
 }
 
-/* General Styles */
+/* General Styles 
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
 }

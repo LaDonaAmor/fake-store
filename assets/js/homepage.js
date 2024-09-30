@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       response.forEach((product) => {
         const description = product.description;
-        const title = product.title;
+        const shortDescription = description.substring(0, 20);
+        const fullDescription = description.length > 20 ? description : "";
 
         products.innerHTML += `
           <div class="product-grid">
@@ -18,24 +19,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }" alt="" loading="lazy"></a>
             </div>
             <div class="product-title">
-              <a href="product.html?id=${product.id}">${
-          title.length > 20 ? title.substring(0, 20).concat("...more") : title
-        }</a>
+              <a href="product.html?id=${product.id}">${product.title}</a>
             </div>
             <div class="product-category">${product.category}</div>
             <div class="product-price">
               ${product.price}<span class="dollar-sign">$</span>
             </div>
             <div class="product-description">
-              ${
-                description.length > 20
-                  ? description.substring(0, 20).concat("...more")
-                  : description
-              }
-            </div>
+               <span class="short-desc">${shortDescription}</span>
+               ${
+                 fullDescription
+                   ? `<span class="full-desc" style="display: none;">${fullDescription}</span>`
+                   : ""
+               }
+               ${
+                 fullDescription
+                   ? '<span class="toggle-desc" style="cursor: pointer;">...more</span>'
+                   : ""
+               }
+             </div>
             <div class="separator"></div>
           </div>
         `;
+      });
+
+      document.querySelectorAll(".toggle-desc").forEach((toggleButton) => {
+        toggleButton.addEventListener("click", function () {
+          const shortDesc = this.previousElementSibling.previousElementSibling;
+          const fullDesc = this.previousElementSibling;
+          if (fullDesc.style.display === "none") {
+            fullDesc.style.display = "inline";
+            shortDesc.style.display = "none";
+            this.textContent = "...less";
+          } else {
+            fullDesc.style.display = "none";
+            shortDesc.style.display = "inline";
+            this.textContent = "...more";
+          }
+        });
       });
     } catch (error) {
       console.error("Error fetching products:", error);
