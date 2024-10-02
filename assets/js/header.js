@@ -1,6 +1,6 @@
-// header.js
 document.addEventListener("DOMContentLoaded", () => {
   loadHeader();
+  fetchCategories();
 });
 
 function loadHeader() {
@@ -9,6 +9,35 @@ function loadHeader() {
     .then((data) => {
       document.getElementById("header-placeholder").innerHTML = data;
     });
+}
+
+async function fetchCategories() {
+  try {
+    const response = await fetch("https://fakestoreapi.com/products/categories");
+    const categories = await response.json();
+    const dropdown = document.getElementById("category-dropdown");
+
+    const allOption = document.createElement("a");
+    allOption.href = "javascript:void(0)";
+    allOption.textContent = "All";
+    allOption.onclick = () => filterProductsByCategory(); 
+    dropdown.appendChild(allOption);
+
+    categories.forEach((category) => {
+      const a = document.createElement("a");
+      a.href = "javascript:void(0)"; 
+      a.textContent = category;
+      a.onclick = () => filterProductsByCategory(category); 
+      dropdown.appendChild(a);
+    });
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+  }
+}
+
+function filterProductsByCategory(category) {
+  const event = new CustomEvent("filterProducts", { detail: { category } });
+  window.dispatchEvent(event); 
 }
 
 window.onscroll = function () {

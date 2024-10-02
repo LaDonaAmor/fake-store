@@ -5,8 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const data = await fetch(url);
       const response = await data.json();
+      window.allProducts = response;
 
-      response.forEach((product) => {
+      renderProducts(response);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      }
+    }
+
+    function renderProducts(productToRender) {
+      products.innerHTML = "";
+      productToRender.forEach((product) => {
+
         const description = product.description;
         const shortDescription = description.substring(0, 20);
         const fullDescription = description.length > 20 ? description : "";
@@ -58,10 +68,18 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  }
+    } 
+    
+    window.addEventListener("filterProducts", (event) => {
+      const category = event.detail.category;
 
-  fetchProducts("https://fakestoreapi.com/products");
-});
+      const filteredProducts = category
+    ? window.allProducts.filter(product => product.category === category)
+    : window.allProducts; 
+   
+    renderProducts(filteredProducts);
+    });
+
+    fetchProducts("https://fakestoreapi.com/products");
+
+  });

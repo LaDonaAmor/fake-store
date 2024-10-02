@@ -144,3 +144,33 @@ input[type="search"]::placeholder {
   width: 20px;
   pointer-events: none;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgb(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 2px 10px;
+  text-decoration: none;
+  display: block;
+
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-xlarge);
+  position: relative;
+  font-weight: 500;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
