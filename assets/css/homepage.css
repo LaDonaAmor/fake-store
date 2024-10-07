@@ -1,8 +1,8 @@
-@import url('../css/table.css');
+@import url("../css/table.css");
 
 /* Homepage Style */
 body {
-  background-image: url('../img/background.jpg');
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,5 +16,23 @@ main {
 }
 
 .product-grid {
-  grid-template-columns: 0.1fr 2fr 1fr 0.3fr 2.5fr;
+  display: grid;
+  grid-template-columns: 150px 300px 150px 50px 300px;
+}
+
+.product-grid a:link,
+.product-grid a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.product-grid a:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.toggle-desc {
+  color: var(--color-primary);
 }

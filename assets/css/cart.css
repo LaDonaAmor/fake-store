@@ -1,5 +1,4 @@
-@import url('../css/table.css');
-
+@import url("../css/table.css");
 
 /* Cart Style */
 body {
@@ -33,5 +32,19 @@ main {
 }
 
 .product-grid {
-  grid-template-columns: 0.2fr 2fr 1fr 0.3fr 2.7fr 0.1fr;
+  display: grid;
+  grid-template-columns: 150px 200px 150px 100px 300px 50px;
+}
+
+.remove {
+  background-color: white;
+  border: none;
+  color: none;
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-small);
+}
+
+.toggle-title,
+.toggle-desc {
+  color: var(--color-primary);
 }

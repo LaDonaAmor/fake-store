@@ -10,14 +10,16 @@
     />
     <link rel="stylesheet" href="../assets/css/cart.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
+    <script src="../assets/js/header.js" defer></script>
+    <script src="assets/js/cart.js" defer></script>
   </head>
-  <body>
+  <body class="cart-page">
     <div id="header-placeholder"></div>
     <main>
       <section class="product-list">
         <h2>Cart</h2>
         <div class="total-price">
-          Total: <span class="price">103.43</span>
+          Total: <span class="price"></span>
           <span class="dollar-sign">$</span>
         </div>
         <div class="product-grid">
@@ -29,67 +31,9 @@
           <div class="product-header"></div>
           <div class="separator"></div>
 
-          <!-- Product 1 -->
-          <div class="product-image"></div>
-          <div class="product-title">Fjallraven - Foldsack N...</div>
-          <div class="product-category">men’s clothing</div>
-          <div class="product-price">
-            109.95<span class="dollar-sign">$</span>
-          </div>
-          <div class="product-description">
-            Your perfect pack for everyday use and walks in the forest...
-          </div>
-          <div class="product-select">
-            <img src="../assets/img/svg/delete_24px.svg" alt="delete" class="delete" />
-          </div>
-          <div class="separator"></div>
-
-          <!-- Product 2 -->
-          <div class="product-image"></div>
-          <div class="product-title">Fjallraven - Foldsack N...</div>
-          <div class="product-category">men’s clothing</div>
-          <div class="product-price">
-            109.95<span class="dollar-sign">$</span>
-          </div>
-          <div class="product-description">
-            Your perfect pack for everyday use and walks in the forest...
-          </div>
-          <div class="product-select">
-            <img src="../assets/img/svg/delete_24px.svg" alt="delete" class="delete" />
-          </div>
-          <div class="separator"></div>
-
-          <!-- Product 3 -->
-          <div class="product-image"></div>
-          <div class="product-title">Fjallraven - Foldsack N...</div>
-          <div class="product-category">men’s clothing</div>
-          <div class="product-price">
-            109.95<span class="dollar-sign">$</span>
-          </div>
-          <div class="product-description">
-            Your perfect pack for everyday use and walks in the forest...
-          </div>
-          <div class="product-select">
-            <img src="../assets/img/svg/delete_24px.svg" alt="delete" class="delete" />
-          </div>
-          <div class="separator"></div>
-
-          <!-- Product 4 -->
-          <div class="product-image"></div>
-          <div class="product-title">Fjallraven - Foldsack N...</div>
-          <div class="product-category">men’s clothing</div>
-          <div class="product-price">
-            109.95<span class="dollar-sign">$</span>
-          </div>
-          <div class="product-description">
-            Your perfect pack for everyday use and walks in the forest...
-          </div>
-          <div class="product-select">
-            <img src="../assets/img/svg/delete_24px.svg" alt="delete" class="delete" />
-          </div>
+          <div id="products"></div>
         </div>
       </section>
     </main>
-    <script src="../assets/js/header.js"></script>
   </body>
 </html>

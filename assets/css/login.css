@@ -1,227 +1,226 @@
 /* Login Style */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .login-container {
-    width: 680px;
-    height: 342px;
-    box-sizing: border-box;
-    padding: var(--spacing-large);
-    border: 1px solid none;
-    border-radius: var(--border-radius-xlarge);
-    background-color: var(--color-background-semi);
-    box-shadow: var(--box-shadow-default);
+  width: 680px;
+  height: 342px;
+  box-sizing: border-box;
+  padding: var(--spacing-large);
+  border: 1px solid none;
+  border-radius: var(--border-radius-xlarge);
+  background-color: var(--color-background-semi);
+  box-shadow: var(--box-shadow-default);
 }
 
 h1 {
-    font-size: var(--font-size-xxlarge);
-    font-weight: 700;
-    text-align: center;
-    position: relative;
-    bottom: var(--spacing-small);
+  font-size: var(--font-size-xxlarge);
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  bottom: var(--spacing-small);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group {
-    margin-bottom: var(--spacing-medium);
-    text-align: left;
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
 }
 
 label {
-    font-size: 0.81rem;
-    font-weight: 500;
+  font-size: 0.81rem;
+  font-weight: 500;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 610px;
-    height: 30px;
-    padding: 8px 14px;
-    margin: 8px 0 10px o;
-    background-color: var(--color-background-full);
-    border: 1px solid var(--color-background-full);
-    border-radius: var(--border-radius-medium);
+  width: 610px;
+  height: 30px;
+  padding: 8px 14px;
+  margin: 8px 0 10px o;
+  background-color: var(--color-background-full);
+  border: 1px solid var(--color-background-full);
+  border-radius: var(--border-radius-medium);
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    outline: none;
-    border-color: var(--color-secondary);
+  outline: none;
+  border-color: var(--color-secondary);
 }
 
 input[type="submit"] {
-    width: 100%;
-    padding: var(--spacing-medium);
-    background-color: var(--color-secondary);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius-large);
-    cursor: pointer;
-    font-size: var(--font-size-medium);
-    font-weight: 400;
+  width: 100%;
+  padding: var(--spacing-medium);
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  font-weight: 400;
 }
 
 input[type="submit"]:hover {
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
-
 
 /* Media Queries */
 
 /* Small devices (smartphones, portrait) */
 @media (max-width: 480px) {
-    .login-container {
-        width: 90%;
-        height: auto;
-        padding: 0.94rem;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 92%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 0.875rem;
-    }
+  .login-container {
+    width: 90%;
+    height: auto;
+    padding: 0.94rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 92%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
 }
 
 /* Medium devices (smartphones, landscape) */
 @media (min-width: 481px) and (max-width: 767px) {
-    .login-container {
-        width: 80%;
-        height: auto;
-        padding: 0.938rem;
-    }
-    h1 {
-        font-size: 1.75rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 92%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 0.875rem;
-    }
+  .login-container {
+    width: 80%;
+    height: auto;
+    padding: 0.938rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 92%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
 }
 
 /* Tablets (portrait) */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .login-container {
-        width: 70%;
-        height: auto;
-        padding: 1.25rem;
-    }
-    h1 {
-        font-size: 1.875rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 95%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 0.938rem;
-    }
+  .login-container {
+    width: 70%;
+    height: auto;
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 1.875rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 0.938rem;
+  }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 1024px) and (max-width: 1279px) {
-    .login-container {
-        width: 60%;
-        height: auto;
-        padding: 1.25rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 95%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
+  .login-container {
+    width: 60%;
+    height: auto;
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
 
 /* Small laptops and desktops */
 @media (min-width: 1280px) and (max-width: 1366px) {
-    .login-container {
-        width: 50%;
-        height: auto;
-        padding: 1.25rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 95%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
+  .login-container {
+    width: 50%;
+    height: auto;
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
 
 /* Larger laptops and desktops */
 @media (min-width: 1367px) and (max-width: 1920px) {
-    .login-container {
-        width: 40%;
-        height: auto;
-        padding: 1.25rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 95%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
+  .login-container {
+    width: 40%;
+    height: auto;
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
 
 /* Ultra-wide and 4K screens */
 @media (min-width: 1921px) {
-    .login-container {
-        width: 30%;
-        height: auto;
-        padding: 1.25rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: 95%;
-        height: 2.5rem;
-    }
-    input[type="submit"] {
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
+  .login-container {
+    width: 30%;
+    height: auto;
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 2.5rem;
+  }
+  input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
