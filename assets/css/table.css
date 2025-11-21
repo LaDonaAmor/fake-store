@@ -69,3 +69,11 @@
 .dollar-sign {
   color: var(--color-primary);
 }
+
+body.dark-mode .product-title,
+body.dark-mode .product-category,
+body.dark-mode .product-description,
+body.dark-mode .product-rate,
+body.dark-mode .product-price {
+  color: var(--color-text-primary);
+}

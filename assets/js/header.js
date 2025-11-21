@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadHeader();
   fetchCategories();
+
+  // Apply dark mode to body immediately
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
 });
 
 function loadHeader() {
@@ -8,26 +13,58 @@ function loadHeader() {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header-placeholder").innerHTML = data;
+
+      // Dark mode toggle
+      const toggleSwitch = document.getElementById("toggleSwitch");
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggleSwitch.checked = true;
+      }
+
+      toggleSwitch.addEventListener("change", () => {
+        if (toggleSwitch.checked) {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // --- SEARCH FUNCTIONALITY ---
+      const searchInput = document.getElementById("search");
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+          // Trigger a custom event with the search query
+          const event = new CustomEvent("searchProducts", {
+            detail: { query },
+          });
+          window.dispatchEvent(event);
+        });
+      }
     });
 }
 
 async function fetchCategories() {
   try {
-    const response = await fetch("https://fakestoreapi.com/products/categories");
+    const response = await fetch(
+      "https://fakestoreapi.com/products/categories"
+    );
     const categories = await response.json();
     const dropdown = document.getElementById("category-dropdown");
 
     const allOption = document.createElement("a");
     allOption.href = "javascript:void(0)";
     allOption.textContent = "All";
-    allOption.onclick = () => filterProductsByCategory(); 
+    allOption.onclick = () => filterProductsByCategory();
     dropdown.appendChild(allOption);
 
     categories.forEach((category) => {
       const a = document.createElement("a");
-      a.href = "javascript:void(0)"; 
+      a.href = "javascript:void(0)";
       a.textContent = category;
-      a.onclick = () => filterProductsByCategory(category); 
+      a.onclick = () => filterProductsByCategory(category);
       dropdown.appendChild(a);
     });
   } catch (error) {
@@ -37,7 +74,7 @@ async function fetchCategories() {
 
 function filterProductsByCategory(category) {
   const event = new CustomEvent("filterProducts", { detail: { category } });
-  window.dispatchEvent(event); 
+  window.dispatchEvent(event);
 }
 
 window.onscroll = function () {

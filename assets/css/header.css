@@ -156,7 +156,7 @@ input[type="search"]::placeholder {
   background-color: white;
   padding: 6px;
   min-width: 150px;
-  box-shadow: 0px 8px 16px rgb(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgb(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -173,4 +173,18 @@ input[type="search"]::placeholder {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+body.dark-mode input[type="search"] {
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+}
+
+body.dark-mode .dropdown-content {
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+}
+
+body.dark-mode nav ul li a {
+  color: var(--color-primary);
 }

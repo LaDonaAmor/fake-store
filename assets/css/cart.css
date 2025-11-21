@@ -48,3 +48,8 @@ main {
 .toggle-desc {
   color: var(--color-primary);
 }
+
+body.dark-mode .price,
+body.dark-mode .total-price {
+  color: var(--color-text-primary);
+}

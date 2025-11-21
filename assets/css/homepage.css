@@ -22,7 +22,7 @@ main {
 
 .product-grid a:link,
 .product-grid a:visited {
-  color: black;
+  color: var(--color-text-primary);
   background-color: transparent;
   text-decoration: none;
 }
