@@ -54,7 +54,6 @@ main {
 .product-description,
 .product-rate {
   margin: 0.5rem 0;
-  color: var(--color-primary-main2);
 }
 
 .category {
